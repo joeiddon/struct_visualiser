@@ -1,0 +1,42 @@
+<html>
+<head>
+<style>
+html,body{
+    padding: 0;
+    margin: 0;
+}
+#canvas { cursor: grab; }
+#canvas:active{ cursor: grabbing; }
+#menu{
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: white;
+}
+#menu > div > div {
+    /*display: none;*/
+    display: inline-block;
+}
+#menu > div > a:hover ~ div,
+#menu > div > a:active ~ div {
+    /*display: inline-block;*/
+    color: #e44;
+}
+#menu > div > div > span {
+    margin: 0 0 0 1em;
+}
+#menu a {
+    color: #44f;
+}
+</style>
+</head>
+
+<body oncontextmenu='return false';> <!-- disables right click pop-up -->
+<canvas id='canvas' tabindex=1></canvas>
+<div id='menu'></div>
+<script src='helpers.js'></script>
+<script src='shaders.js'></script>
+<script src='structs.js'></script>
+<script src='script.js'></script>
+</body>
+</html>
